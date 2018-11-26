@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TransactionViewModel {
+@objcMembers class TransactionViewModel: NSObject {
     let amount: String
     var date: String
     let price: String
@@ -19,6 +19,7 @@ class TransactionViewModel {
         self.date = ""
         self.price = "$ \(transaction.price)"
         self.type = transaction.type
+        super.init()
         self.date = self.getDateFromUnixTimestamp(transaction.date)
     }
     

@@ -21,6 +21,8 @@
 		60595BCE21AB20C00043FD02 /* TransactionDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60595BCD21AB20C00043FD02 /* TransactionDetailsController.swift */; };
 		60595BD021AB21D40043FD02 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60595BCF21AB21D40043FD02 /* TransactionViewModel.swift */; };
 		60595BD221AB350B0043FD02 /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60595BD121AB350B0043FD02 /* TransactionView.swift */; };
+		60595BD821ABAA110043FD02 /* DetailsController.h in Sources */ = {isa = PBXBuildFile; fileRef = 60595BD721ABAA110043FD02 /* DetailsController.h */; };
+		60595BDA21ABAA780043FD02 /* DetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60595BD921ABAA780043FD02 /* DetailsController.m */; };
 		60B43BBE21A8E60B0033F726 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B43BBD21A8E60B0033F726 /* AppDelegate.swift */; };
 		60B43BC321A8E60B0033F726 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60B43BC121A8E60B0033F726 /* Main.storyboard */; };
 		60B43BC521A8E61A0033F726 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60B43BC421A8E61A0033F726 /* Assets.xcassets */; };
@@ -72,6 +74,9 @@
 		60595BCD21AB20C00043FD02 /* TransactionDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsController.swift; sourceTree = "<group>"; };
 		60595BCF21AB21D40043FD02 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
 		60595BD121AB350B0043FD02 /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
+		60595BD321ABA7900043FD02 /* CurrencyApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CurrencyApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		60595BD721ABAA110043FD02 /* DetailsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsController.h; sourceTree = "<group>"; };
+		60595BD921ABAA780043FD02 /* DetailsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsController.m; sourceTree = "<group>"; };
 		60B43BBA21A8E60B0033F726 /* CurrencyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60B43BBD21A8E60B0033F726 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60B43BC221A8E60B0033F726 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -157,6 +162,8 @@
 				60595BBE21AAFE410043FD02 /* BitcoinTransactionsController.swift */,
 				60595BCD21AB20C00043FD02 /* TransactionDetailsController.swift */,
 				60595BC721AB105E0043FD02 /* ScrollableController.swift */,
+				60595BD721ABAA110043FD02 /* DetailsController.h */,
+				60595BD921ABAA780043FD02 /* DetailsController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -184,6 +191,7 @@
 		60B43BBC21A8E60B0033F726 /* CurrencyApp */ = {
 			isa = PBXGroup;
 			children = (
+				60595BD321ABA7900043FD02 /* CurrencyApp-Bridging-Header.h */,
 				60B43BC921A8E61A0033F726 /* Info.plist */,
 				60B43BC421A8E61A0033F726 /* Assets.xcassets */,
 				60B43BFD21A9A8D80033F726 /* EXTENSION */,
@@ -361,6 +369,7 @@
 				TargetAttributes = {
 					60B43BB921A8E60B0033F726 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					60B43BCD21A8E61B0033F726 = {
 						CreatedOnToolsVersion = 10.0;
@@ -499,6 +508,8 @@
 				60B43BE621A8F6830033F726 /* Parser.swift in Sources */,
 				60595B9B21AAB7EA0043FD02 /* CurrencyType.swift in Sources */,
 				60595BC621AAFF5E0043FD02 /* Transaction.swift in Sources */,
+				60595BDA21ABAA780043FD02 /* DetailsController.m in Sources */,
+				60595BD821ABAA110043FD02 /* DetailsController.h in Sources */,
 				60B43BF321A930390033F726 /* TransactionEndpoints.swift in Sources */,
 				60595BBF21AAFE410043FD02 /* BitcoinTransactionsController.swift in Sources */,
 				60B43BFA21A933DA0033F726 /* BitcointRateViewModel.swift in Sources */,
@@ -581,6 +592,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -642,6 +654,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -667,7 +680,9 @@
 			baseConfigurationReference = 3F20C858A2CB45A1D03D28B1 /* Pods-CurrencyApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = W7XBRGS6CR;
 				INFOPLIST_FILE = CurrencyApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -677,6 +692,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = yera.CurrencyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CurrencyApp/CurrencyApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -687,7 +704,9 @@
 			baseConfigurationReference = 3D5D012A6650D6C5AB2B9BE4 /* Pods-CurrencyApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = W7XBRGS6CR;
 				INFOPLIST_FILE = CurrencyApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -697,6 +716,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = yera.CurrencyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CurrencyApp/CurrencyApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

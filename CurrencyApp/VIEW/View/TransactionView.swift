@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TransactionView: UIView {
+@objcMembers class TransactionView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()

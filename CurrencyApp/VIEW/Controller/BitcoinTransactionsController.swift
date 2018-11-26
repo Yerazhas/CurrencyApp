@@ -72,6 +72,7 @@ extension BitcoinTransactionsController: UITableViewDataSource, UITableViewDeleg
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let transaction = TransactionViewModel(transaction: viewModel.currentData[indexPath.row])
+//        let vc = DetailsController(BitcoinTransactionDetailsViewModel(transaction: transaction))
         let vc = TransactionDetailsController(viewModel: BitcoinTransactionDetailsViewModel(transaction: transaction))
         navigationController?.pushViewController(vc, animated: true)
     }

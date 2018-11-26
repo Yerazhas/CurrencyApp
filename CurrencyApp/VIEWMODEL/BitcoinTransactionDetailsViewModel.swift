@@ -8,9 +8,9 @@
 
 import Foundation
 
-class BitcoinTransactionDetailsViewModel {
+@objcMembers class BitcoinTransactionDetailsViewModel: NSObject {
     let transaction: TransactionViewModel
-    var completion: ((TransactionViewModel) -> Void)?
+    var completion: (@convention (block) (TransactionViewModel) -> Void)?
     
     init(transaction: TransactionViewModel) {
         self.transaction = transaction
