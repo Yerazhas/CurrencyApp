@@ -30,7 +30,6 @@ class BitcoinTransactionsViewModel {
                 print(errorMessage)
             case .success(let transactions):
                 self.currentData = transactions.count > 500 ? Array(transactions.prefix(500)) : transactions
-                self.currentData = transactions
             }
         }
     }
